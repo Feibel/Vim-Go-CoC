@@ -6,6 +6,12 @@ set tabstop=4
 filetype plugin indent on
 set laststatus=2
 
+colorscheme industry
+
+" Match terminal bg for text and nontext area
+hi Normal ctermbg=NONE
+hi EndOfBuffer ctermbg=NONE
+
 call plug#begin()
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -33,4 +39,3 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-colorscheme industry

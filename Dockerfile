@@ -23,7 +23,7 @@ COPY .vimrc /root/.vimrc
 RUN dos2unix /root/.vimrc
 
 # Install plugins in silent mode
-RUN vim -E -s -u ~/.vimrc +PlugInstall +qall
+RUN vim -E -s -u ~/.vimrc +PlugInstall +qall || true
 
 # Run vim-go's GoInstallBinaries (in silent mode)
 RUN vim -E -s -u ~/.vimrc +GoInstallBinaries +qall || true
