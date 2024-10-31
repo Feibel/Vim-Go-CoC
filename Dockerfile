@@ -28,6 +28,9 @@ RUN vim -E -s -u ~/.vimrc +PlugInstall +qall || true
 # Run vim-go's GoInstallBinaries (in silent mode)
 RUN vim -E -s -u ~/.vimrc +GoInstallBinaries +qall || true
 
+# Copy coc settings file
+COPY coc-settings.json /root/.vim/coc-settings.json
+
 # Create working dir
 WORKDIR /workspace
 
