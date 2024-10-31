@@ -11,6 +11,9 @@ RUN apk add --no-cache \
    golangci-lint \
    bash
 
+# Set terminal color palette
+ENV TERM=xterm-256color
+
 # Get vim-plug script
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
