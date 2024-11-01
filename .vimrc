@@ -1,5 +1,6 @@
 syntax on
 set number
+set rnu
 set expandtab
 set shiftwidth=4
 " set tabstop=4
@@ -9,7 +10,7 @@ set cursorline
 
 " Custom colorscheme
 hi LineNr ctermfg=7 
-hi CursorLine ctermbg=NONE
+hi CursorLine ctermbg=NONE cterm=NONE
 hi CursorLineNr ctermfg=227 cterm=bold
 hi Type cterm=italic ctermfg=221
 hi Keyword cterm=bold ctermfg=38
@@ -18,6 +19,7 @@ hi Repeat cterm=bold ctermfg=176
 hi Conditional cterm=bold ctermfg=79
 hi Special ctermfg=221
 hi Identifier ctermfg=38
+hi SignColumn ctermbg=NONE
 
 " Match terminal bg for text and nontext area
 hi Normal ctermbg=NONE ctermfg=255
